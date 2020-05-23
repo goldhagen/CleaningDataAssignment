@@ -9,7 +9,7 @@
 The data set comes with a comprehensive description in the included readme file, pasted below for convenience.
 The following processing steps were undertaken on the original data:
 - test and training data were merged. The new variable X contains a column 'testOrtrain' which includes 'test' or 'train' to mark the original subset of the data
-- the original X_train and X_test sets were augmented with the subject ID, in the combinded data set X with column 'subject'
+- the original X_train and X_test sets were augmented with the subject ID, in the combinded data set X with column 'subject'.  So X now contains 563 columns. 
 
 ## Averaging per subject ID
 

@@ -1,6 +1,18 @@
 # Code Book
 
-The data set comes with a comprehensive description in the included readme file.
+2 blocks of processing are undertaken
+- combining test and training data
+- computing certain averages per subject
+
+
+## Combining test and training dataset, including subject IDs
+The data set comes with a comprehensive description in the included readme file, pasted below for convenience.
+The following processing steps were undertaken on the original data:
+- test and training data were merged. The new variable X contains a column 'testOrtrain' which includes 'test' or 'train' to mark the original subset of the data
+- the original X_train and X_test sets were augmented with the subject ID, in the combinded data set X with column 'subject'
+
+## Averaging per subject ID
+
 
 ## Readme file of the data set
 

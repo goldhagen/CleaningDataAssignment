@@ -1,18 +1,21 @@
 # Code Book
 
 2 blocks of processing are undertaken
-- combining test and training data
-- computing certain averages per subject
+- combining test and training data in dataframe dat
+- computing certain averages per subject and activity in dataframe dat_ave
 
 
 ## Combining test and training dataset, including subject IDs
 The data set comes with a comprehensive description in the included readme file, pasted below for convenience.
 The following processing steps were undertaken on the original data:
-- test and training data were merged. The new variable X contains a column 'testOrtrain' which includes 'test' or 'train' to mark the original subset of the data
-- the original X_train and X_test sets were augmented with the subject ID, in the combinded data set X with column 'subject'.  So X now contains 563 columns. 
+- test and training data were merged. The new dataframe dat contains a column 'testOrtrain' which includes 'test' or 'train' to mark the original subset of the data
+- the original X_train and X_test sets were augmented with the subject ID, in the combinded data set dat with column 'subject'.
+- the original y_train and y_test sets contain the activity, and are now present in the dataframe dat in column 'activity' (a factor with 6 levels).
+- So dat now contains 564 columns. 
 
 ## Averaging per subject ID
-
+- regex pattern matching is used to extract all columns with mean or std values
+- dplyr syntax is used to group by activity and subject ID and calculate the means of all other columns.
 
 ## Readme file of the data set
 

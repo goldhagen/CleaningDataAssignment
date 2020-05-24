@@ -40,3 +40,5 @@ ix <- grep("*-mean()*|*-std()*|subject|activity",colnames(dat))
 
 # grouping by subject and activity before calculating mean of all remaining columns
 dat_ave <- dat[,ix] %>% group_by(activity, subject)  %>% summarize_all(mean)
+write.table(dat_ave, "dat_ave.txt", row.names = FALSE)
+
